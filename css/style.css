@@ -1618,6 +1618,44 @@ button {
     text-align: center;
 }
 
+/* style.css 1200行目付近 */
+
+/* 親の .judge-card などを付けて、下の古いコードより「詳しく」書く */
+.judge-card .prof-btn-area {
+    display: flex;
+    flex-direction: row;
+    /* PCでは横並び */
+    justify-content: center;
+    /* 中央寄せ */
+    gap: 15px;
+    /* ボタンの隙間 */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.judge-card .prof-btn-area .btn {
+    flex: 1;
+    /* 2つのボタンを同じ幅に広げる */
+    max-width: 200px;
+    /* 広がりすぎ防止 */
+    min-width: 120px;
+    /* 潰れすぎ防止 */
+    padding: 12px 0;
+}
+
+/* スマホでは縦に積む（あるあるな動き） */
+@media (max-width: 767px) {
+    .judge-card .prof-btn-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .judge-card .prof-btn-area .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
 .judge-header {
     margin-bottom: 15px;
     text-align: center;
