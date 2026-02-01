@@ -16,7 +16,7 @@ get_header();
     <div class="container">
 
         <section class="entry-section">
-            <h2 class="entry-title">Entry fee</h2>
+            <h2 class="section-title left">Entry fee</h2>
 
             <div class="fee-table">
                 <div class="fee-row">
@@ -60,7 +60,7 @@ get_header();
 
 
         <section>
-            <h2 class="entry-title">Entry Form</h2>
+            <h2 class="section-title left">Entry Form</h2>
 
             <div class="form-wrapper">
                 <?php

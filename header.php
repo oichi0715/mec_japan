@@ -20,11 +20,17 @@
             </h1>
 
             <nav class="main-nav">
+                <button class="menu-toggle" aria-label="メニュー開閉">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'main-menu',
                     'container'      => false,
-                    'menu_class'     => 'nav-list',
+                    'menu_class'     => 'nav-list', // クラス名は nav-list のままでOKです
                     'fallback_cb'    => false,
                 ));
                 ?>

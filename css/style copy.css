@@ -3355,188 +3355,58 @@ button {
 
 
     /* ============================================
-   ドロップダウンメニュー (PC用)
+   ドロップダウンメニュー：PC・スマホ共通 決定版
    ============================================ */
 
-    /* ----------------
-   1. スマホ・タブレット（768px未満）
-   スマホでは最初から全部表示しておく（アコーディオンにしない簡易版）
-   ---------------- */
-    @media screen and (max-width: 767px) {
-        .sub-menu {
-            padding-left: 20px;
-            /* 子メニューは少し右にずらす */
-            background: #f9f9f9;
-        }
-
-        .sub-menu li a {
-            font-size: 0.85rem;
-            padding: 10px 0;
-        }
+    /* 1. まず全デバイスでサブメニューを強制的に隠す */
+    .main-nav .sub-menu {
+        display: none !important;
+        /* 何が何でも一度消す */
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        width: 250px !important;
+        background: #fff !important;
+        z-index: 9999 !important;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+        padding: 10px 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
     }
 
-    /* ----------------
-   2. PC（768px以上）
-   マウスホバーで表示させる設定
-   ---------------- */
+    /* 2. PCサイズ（768px以上）のホバー設定 */
     @media (min-width: 768px) {
 
-        /* 親メニュー（li）の設定 */
-        .nav-list>li {
-            position: relative;
-            /* 子メニューの基準点 */
-            height: 100%;
-            /* 高さを確保 */
-            display: flex;
-            /* 文字を縦中央にするため */
-            align-items: center;
+        /* 親要素を基準にする */
+        .main-nav .nav-list>li {
+            position: relative !important;
         }
 
-        /* サブメニュー（ul.sub-menu）の設定 */
-        .sub-menu {
-            position: absolute;
-            top: 100%;
-            /* 親の真下に配置 */
-            left: 0;
-            min-width: 220px;
-            /* 幅を少し広めに */
-            background: #fff;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            /* 影をつける */
-            padding: 10px 0;
-            border-radius: 0 0 5px 5px;
-
-            /* ★ここで普段は隠す！ */
-            visibility: hidden;
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 999;
+        /* ホバーした時だけ「ブロック」として表示する */
+        .main-nav .nav-list>li:hover>.sub-menu {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
         }
 
-        /* サブメニューのリンク */
+        /* サブメニュー内のリンク */
         .sub-menu li a {
-            display: block;
-            padding: 12px 20px;
-            color: #333;
-            font-size: 0.9rem;
-            white-space: nowrap;
-            /* 文字を折り返さない */
-            font-weight: normal;
-            /* 太字にしない */
-            transition: background 0.3s;
+            display: block !important;
+            padding: 12px 20px !important;
+            color: #333 !important;
+            font-size: 0.9rem !important;
+            text-align: left !important;
+            border-bottom: 1px solid #eee !important;
         }
 
         .sub-menu li a:hover {
-            background-color: #f0f8ff;
-            /* 薄い青 */
-            color: #005bac;
-            /* 青文字 */
-        }
-
-        /* ★魔法のコード：親（li）にマウスが乗ったら表示する */
-        .nav-list>li:hover .sub-menu {
-            visibility: visible;
-            opacity: 1;
-            top: 100%;
+            background-color: #f0f8ff !important;
+            color: #005bac !important;
         }
     }
 
-
-
-
-    /* ============================================
-   【修正版】ドロップダウンメニュー (PC用)
-   ============================================ */
-
-    @media (min-width: 768px) {
-
-        /* 1. 親メニュー（１階層目）だけの指定 */
-        /* .main-nav 直下の ul だけを横並びにする（サブメニューには効かせない） */
-        .main-nav>ul.nav-list {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* 2. 親メニューの各項目 */
-        .main-nav>ul.nav-list>li {
-            position: relative;
-            /* 子メニューの基準点 */
-            height: 100%;
-            display: flex;
-            align-items: center;
-        }
-
-        /* リンクのデザイン */
-        .main-nav>ul.nav-list>li>a {
-            display: block;
-            padding: 10px 0;
-            color: #333;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        /* ----------------------------------
-       3. サブメニュー（ドロップダウン部分）
-       ---------------------------------- */
-        .main-nav .sub-menu {
-            /* 絶対配置で浮かせる */
-            position: absolute;
-            top: 100%;
-            /* 親の真下 */
-            left: 0;
-            width: 220px;
-            /* 幅 */
-            background: #fff;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            z-index: 9999;
-
-            /* ★重要：Flexboxのリセット（縦並びに戻す） */
-            display: block !important;
-            padding: 10px 0;
-            border-radius: 0 0 5px 5px;
-
-            /* ★隠す設定 */
-            visibility: hidden;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        /* サブメニューの各項目 */
-        .main-nav .sub-menu li {
-            display: block;
-            /* 縦積み */
-            width: 100%;
-        }
-
-        .main-nav .sub-menu li a {
-            display: block;
-            padding: 12px 20px;
-            font-size: 0.9rem;
-            color: #333;
-            font-weight: normal;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .main-nav .sub-menu li:last-child a {
-            border-bottom: none;
-        }
-
-        .main-nav .sub-menu li a:hover {
-            background-color: #f0f8ff;
-            color: #005bac;
-        }
-
-        /* ----------------------------------
-       4. ホバー時の動き（表示する）
-       ---------------------------------- */
-        /* 親(li)にマウスが乗ったら、その中の .sub-menu を表示 */
-        .main-nav li:hover>.sub-menu {
-            visibility: visible;
-            opacity: 1;
-            top: 100%;
-            /* 位置調整 */
-        }
+    /* 3. スマホサイズ（767px以下）の表示設定 */
+    @media (max-width: 767px) {
+        /* スマホでクリックして出したい場合は、ここを調整しますが
+       まずは「全部出る」のを防ぐため、一旦 display: none のままにします */
     }

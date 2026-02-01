@@ -100,7 +100,7 @@
         <div class="p-location__deco p-location__deco--dots-bottom" aria-hidden="true"></div>
 
         <div class="container">
-            <h2 class="p-location__title gradation-text">Event Locations</h2>
+            <h2 class="section-title left gradation-text">Event Locations</h2>
 
             <!-- Google Map 埋め込み -->
             <div class="p-location__map">

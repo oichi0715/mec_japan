@@ -162,16 +162,16 @@
             <!-- 特徴カード 1: Official Competition -->
             <article class="feature-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/tokutyou1.png" alt="公式大会アイコン" class="icon">
-                <h3>Official Competition</h3>
-                <p>
-                    The world’s first and only official entrepreneur competition founded at an Ivy League – Columbia Business School. IEG now facilitates all MEC’s across the globe.
-                </p>
+                <h3 class="sub-title blue">Official Competition</h3">
+                    <p>
+                        The world’s first and only official entrepreneur competition founded at an Ivy League – Columbia Business School. IEG now facilitates all MEC’s across the globe.
+                    </p>
             </article>
 
             <!-- 特徴カード 2: Total Prize -->
             <article class="feature-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/tokutyou2.png" alt="賞金アイコン" class="icon">
-                <h3>Total Prize Exceeds $100,000</h3>
+                <h3 class="sub-title blue">Total Prize Exceeds $100,000</h3>
                 <p>
                     IEG is dedicated to bringing the world’s top education experience to students all over the world. As a non-profit organization, IEG contributed more than USD 100,000 each year to MEC.
             </article>
@@ -179,7 +179,7 @@
             <!-- 特徴カード 3: Judges -->
             <article class="feature-card">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/tokutyou3.png" alt="審査員アイコン" class="icon">
-                <h3>Judges from Ivy League Schools and Industry Leaders</h3>
+                <h3 class="sub-title blue">Judges from Ivy League Schools and Industry Leaders</h3>
                 <p>
                     The Judging Panel consists of top executives from Fortune 500 and current professors and instructors from top universities. All team members will have a chance to consult directly with professors and domain experts.
                 </p>
@@ -208,7 +208,7 @@
              ============================================ -->
     <section class="about-mec">
         <div class="container">
-            <h2 class="white-title">ABOUT MEC</h2>
+            <h2 class="section-title white">ABOUT MEC</h2>
             <p>
                 MEC stands as the quintessential entrepreneurship competition. It connects Columbia Business School’s MBA program teachings to aspiring entrepreneurs. It challenges students to tackle real-world business problems by crafting detailed business plans, including product analysis, market research, marketing strategies, financial planning, and risk management. Additionally, participants create promotional videos and deliver compelling presentations to the judging panel. This immersive experience equips students with practical skills and invaluable exposure to the world of entrepreneurship and business.
 
@@ -235,7 +235,7 @@
             </div>
             <!-- テキスト情報 -->
             <div class="prof-text-box">
-                <h2 class="prof-title">
+                <h2 class="section-title left">
                     Dr. Anas Chalah,<br>
                     Assistant Dean at Harvard SEAS
                 </h2>
@@ -268,7 +268,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/images/White-Oaks-Secondary-School-2.png" alt="1位チーム">
                     </div>
                     <div class="winner-info">
-                        <h3 class="team-name">Team Name</h3>
+                        <h3 class="sub-title team-name">Team Name</h3>
                         <div class="info-row">
                             <span class="tag">School name</span>
                             White-Oaks-Secondary-School
@@ -292,7 +292,7 @@
                         </div>
                     </div>
                     <div class="winner-info mini">
-                        <h3 class="team-name">Team Name</h3>
+                        <h3 class="sub-title team-name">Team Name</h3>
                         <div class="info-row">
                             <span class="tag">School name</span>
                             White-Oaks-Secondary-School
@@ -313,7 +313,7 @@
                         </div>
                     </div>
                     <div class="winner-info mini">
-                        <h3 class="team-name">Team Name</h3>
+                        <h3 class="sub-title team-name">Team Name</h3>
                         <div class="info-row">
                             <span class="tag">School name</span>
                             White-Oaks-Secondary-School
@@ -334,7 +334,7 @@
                         </div>
                     </div>
                     <div class="winner-info mini">
-                        <h3 class="team-name">Team Name</h3>
+                        <h3 class="sub-title team-name">Team Name</h3>
                         <div class="info-row">
                             <span class="tag">School name</span>
                             White-Oaks-Secondary-School
@@ -355,7 +355,7 @@
                         </div>
                     </div>
                     <div class="winner-info mini">
-                        <h3 class="team-name">Team Name</h3>
+                        <h3 class="sub-title team-name">Team Name</h3>
                         <div class="info-row">
                             <span class="tag">School name</span>
                             White-Oaks-Secondary-School

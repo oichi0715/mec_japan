@@ -3,20 +3,18 @@ document.addEventListener('DOMContentLoaded', function () {
     /* ===================================================
        1. ハンバーガーメニューの開閉動作
        =================================================== */
-    const hamburger = document.getElementById('js-hamburger');
-    const nav = document.querySelector('.main-nav');
 
-    if (hamburger && nav) {
-        hamburger.addEventListener('click', function () {
-            // activeクラスをつけ外ししてメニューを表示/非表示
-            hamburger.classList.toggle('active');
-            nav.classList.toggle('active');
+    // ボタン（menu-toggle）をクリックしたら、メニュー（nav-list）に is-open クラスを付け外しする
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleBtn = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
 
-            // アクセシビリティ対応（開いているかどうかをブラウザに伝える）
-            const isExpanded = hamburger.classList.contains('active');
-            hamburger.setAttribute('aria-expanded', isExpanded);
-        });
-    }
+        if (toggleBtn && navList) {
+            toggleBtn.addEventListener('click', function () {
+                navList.classList.toggle('is-open');
+            });
+        }
+    });
 
     /* ===================================================
        2. トップページ：スライドショー設定 (Swiper)
