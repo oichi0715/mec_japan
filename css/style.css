@@ -252,51 +252,41 @@ button {
    2. ボタン共通（パーツ化）
    ---------------- */
 
+/* --- 1. 全ボタン共通の「形」と「挙動」 --- */
 .btn {
     display: inline-block;
     padding: 14px 40px;
     border-radius: 50px;
+    /* 角丸 */
     font-weight: bold;
     text-align: center;
-    transition: var(--transition-fast);
+    transition: all 0.3s ease;
+    /* 滑らかなアニメーション */
     font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
     border: 2px solid transparent;
+    /* ガタつき防止 */
 }
 
-/* 青塗りつぶし（バリエーション） */
-.btn.is-primary {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-sub));
-    color: #fff;
-    padding: 18px 80px;
-    /* 特大サイズが必要な場合のみ */
+/* ホバー（マウスを乗せた時）の共通挙動：少し浮いて光る */
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* 青枠（バリエーション） */
+
 .btn.is-outline {
     background-color: #fff;
     border-color: var(--color-primary);
     color: var(--color-primary);
 }
 
-/* 修正後：クラス名を共通の .btn に差し替える */
-.prof-btn-area .btn {
-    flex: 1;
-    text-align: center;
-    min-width: 140px;
-    max-width: 240px;
-    box-sizing: border-box;
-    /* paddingなどの共通の形は .btn が持っているので、
-       ここには「並び方」に関するものだけ残せばOKです */
-    padding: 14px 0;
-}
-
-
-
-
-
-.btn-wrapper {
-    text-align: center;
-    margin-top: 40px;
+/* 枠線ボタンだけ、ホバー時に色を反転させたい場合（初期デザイン） */
+.btn.is-outline:hover {
+    background-color: var(--color-primary);
+    color: #fff;
 }
 
 /* --- style.css の共通パーツ部分に追加 --- */
@@ -305,6 +295,42 @@ button {
     padding-left: 15px;
     text-align: left;
     /* スケジュール用は左寄せ */
+}
+
+/* 審査員カード内のボタンエリア */
+.prof-btn-area {
+    display: flex;
+    /* 横に並べる魔法の言葉 */
+    flex-direction: column;
+    /* ★スマホでは縦に並べる */
+    gap: 15px;
+    /* ボタン同士の隙間 */
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* その中のボタン */
+.prof-btn-area .btn {
+    width: 100%;
+    /* スマホでは横幅いっぱい */
+    padding: 12px 0;
+    /* 高さを少しスリムに調整 */
+    box-sizing: border-box;
+}
+
+/* PCサイズ (768px以上) になった時の設定 */
+@media (min-width: 768px) {
+    .prof-btn-area {
+        flex-direction: row;
+        /* ★PCでは横に並べる */
+        justify-content: center;
+        /* 中央に寄せる */
+    }
+
+    .prof-btn-area .btn {
+        width: 160px;
+        /* PCでは適切な幅に固定 */
+    }
 }
 
 /* ----------------

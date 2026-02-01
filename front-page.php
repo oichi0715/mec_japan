@@ -215,8 +215,8 @@
 
             </p>
             <div class="prof-btn-area">
-                <a href="<?php echo home_url('/entry/'); ?>" class="btn-outline btn">Entry</a>
-                <a href="<?php echo home_url('/inquiry/'); ?>" class="btn-outline btn">Contact</a>
+                <a href="<?php echo home_url('/entry/'); ?>" class="btn is-outline">Entry</a>
+                <a href="<?php echo home_url('/inquiry/'); ?>" class="btn is-outline">Contact</a>
 
             </div>
         </div>
@@ -390,7 +390,7 @@
             ?>
 
             <div class="btn-wrapper">
-                <a href="<?php echo home_url('/schools'); ?>" class="btn-outline btn">SCHOOL MORE</a>
+                <a href="<?php echo home_url('/schools'); ?>" class="btn is-outline">SCHOOL MORE</a>
             </div>
         </div>
     </section>
