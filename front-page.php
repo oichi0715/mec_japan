@@ -256,7 +256,7 @@
              - ファイナルラウンドの入賞チーム表示
              - 1位は大きく、2-5位は小さく表示
              ============================================ -->
-    <section class="ranking-section">
+    <section class="section ranking-section">
         <div class="container">
             <h2 class="section-title gradation-text">Final Round Winners</h2>
 
@@ -374,7 +374,7 @@
              Schools Section（参加校セクション）
              - 参加校のロゴを表示
              ============================================ -->
-    <section class="section schools-section" id="school">
+    <section class="section" id="school">
         <div class="container">
             <h2 class="section-title gradation-text">
                 Participating Schools<br>

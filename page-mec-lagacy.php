@@ -116,7 +116,7 @@ get_header();
                 <!-- 特典リスト -->
                 <div class="prize-card benefit-card">
                     <div class="card-head">
-                        <h3>🎉 Key Takeaways</h3>
+                        <h3 class="sub-title">🎉 Key Takeaways</h3>
                     </div>
                     <ul class="check-list">
                         <li>Recommendation Letter <small>(from Judges)</small></li>
@@ -129,7 +129,7 @@ get_header();
                 <!-- 賞金リスト -->
                 <div class="prize-card cash-card">
                     <div class="card-head">
-                        <h3>💎 Cash Prize</h3>
+                        <h3 class="sub-title">💎 Cash Prize</h3>
                         <p class="sub">For Global Final Round winners</p>
                     </div>
                     <ul class="rank-list">

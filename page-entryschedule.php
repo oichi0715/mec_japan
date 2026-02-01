@@ -94,7 +94,7 @@
              - Google Map
              - 会場詳細情報（住所、電話、アクセス）
              ============================================ -->
-    <section class="p-location">
+    <section class="section">
         <!-- 装飾要素（背景） -->
         <div class="p-location__deco p-location__deco--tri-top" aria-hidden="true"></div>
         <div class="p-location__deco p-location__deco--dots-bottom" aria-hidden="true"></div>

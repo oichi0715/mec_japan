@@ -53,7 +53,7 @@
     /* コンテナ最大幅 */
     --container-width: 90%;
     /* コンテナ幅 */
-    --section-padding: 80px;
+    --section-padding: 50px;
     /* セクション上下余白 */
     --border-radius: 10px;
     /* 標準角丸 */
@@ -74,6 +74,15 @@
     --shadow-small: 0 2px 10px rgba(0, 0, 0, 0.1);
     --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.1);
     --shadow-large: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+
+@media (min-width: 768px) {
+    :root {
+        --section-padding: 80px;
+        /* ★ここで上書き！!importantは不要です */
+    }
 }
 
 /* ============================================================================
@@ -163,13 +172,12 @@ button {
    セクションタイトル（共通）
    ---------------- */
 .section-title {
-    font-size: 1.75rem;
-    /* スマホ */
+    font-size: 2.0rem;
     font-weight: 900;
     text-align: center;
     margin-bottom: 30px;
     color: var(--color-primary);
-    /* 基本は青 */
+
 }
 
 /* 文字を白くしたい時用の追加ルール */
@@ -240,6 +248,38 @@ button {
 /* ----------------
    ボタン共通スタイル
    ---------------- */
+/* ----------------
+   2. ボタン共通（パーツ化）
+   ---------------- */
+.btn {
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-align: center;
+    transition: var(--transition-fast);
+    font-size: 1rem;
+    border: 2px solid transparent;
+}
+
+/* 青塗りつぶし（バリエーション） */
+.btn.is-primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-sub));
+    color: #fff;
+    padding: 18px 80px;
+    /* 特大サイズが必要な場合のみ */
+}
+
+/* 青枠（バリエーション） */
+.btn.is-outline {
+    background-color: #fff;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+
+
+
 .btn-entry-dark {
     display: inline-block;
     background: linear-gradient(135deg, var(--color-primary), var(--color-sub));
@@ -1061,7 +1101,6 @@ button {
    ランキングセクション（入賞者）
    ---------------- */
 .ranking-section {
-    padding: 80px 0;
     background-color: var(--color-bg-white);
 }
 
@@ -1171,9 +1210,7 @@ button {
 /* ----------------
    参加校セクション
    ---------------- */
-.schools-section {
-    padding: 80px 0;
-}
+
 
 .school-logo-container {
     display: flex;
@@ -1282,7 +1319,6 @@ button {
    ---------------- */
 .p-location {
     position: relative;
-    padding: 80px 0;
     background-color: var(--color-bg-white);
     overflow: hidden;
 }
