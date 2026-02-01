@@ -251,6 +251,7 @@ button {
 /* ----------------
    2. ボタン共通（パーツ化）
    ---------------- */
+
 .btn {
     display: inline-block;
     padding: 14px 40px;
@@ -277,52 +278,33 @@ button {
     color: var(--color-primary);
 }
 
-
-
-
-.btn-entry-dark {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-sub));
-    color: var(--color-bg-white);
-    padding: 18px 80px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    transition: var(--transition-fast);
-    box-shadow: 0 10px 20px rgba(0, 91, 172, 0.2);
-}
-
-.btn-entry-dark:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(0, 91, 172, 0.3);
-    color: var(--color-bg-white);
-}
-
-.btn-outline {
-    display: inline-block;
-    padding: 12px 40px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    background-color: #fff;
-
-    border: 2px solid #005bac;
-    color: #005bac;
+/* 修正後：クラス名を共通の .btn に差し替える */
+.prof-btn-area .btn {
+    flex: 1;
+    text-align: center;
+    min-width: 140px;
+    max-width: 240px;
+    box-sizing: border-box;
+    /* paddingなどの共通の形は .btn が持っているので、
+       ここには「並び方」に関するものだけ残せばOKです */
+    padding: 14px 0;
 }
 
 
-.btn-outline:hover {
-    background-color: #005bac;
-    color: #fff;
-}
+
+
 
 .btn-wrapper {
     text-align: center;
     margin-top: 40px;
+}
+
+/* --- style.css の共通パーツ部分に追加 --- */
+.sub-title.is-lined {
+    border-left: 4px solid var(--color-primary);
+    padding-left: 15px;
+    text-align: left;
+    /* スケジュール用は左寄せ */
 }
 
 /* ----------------
@@ -1917,9 +1899,7 @@ button {
     padding-left: 25px;
 }
 
-.timeline-title {
-    font-size: 14px;
-}
+
 
 .timeline-location {
     font-size: 12px;
@@ -2249,13 +2229,7 @@ button {
 /* ----------------
    内容（Content）
    ---------------- */
-.timeline-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--color-text-dark);
-    margin-bottom: 8px;
-    line-height: 1.4;
-}
+
 
 .timeline-location {
     font-size: 0.9rem;
@@ -3056,7 +3030,7 @@ button {
 }
 
 /* 2. ボタン本体の調整 */
-.prof-btn-area .btn-outline {
+.prof-btn-area {
     flex: 1;
     /* ★2つのボタンを均等な幅（1:1）に引き伸ばす */
     text-align: center;

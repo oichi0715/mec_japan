@@ -33,7 +33,7 @@ get_header();
                         <div class="timeline-item">
                             <span class="timeline-time"><?php echo esc_html($item['time']); ?></span>
                             <div class="timeline-content">
-                                <h3 class="timeline-title"><?php echo nl2br(esc_html($item['title'])); ?></h3>
+                                <h3 class="sub-title blue is-lined"><?php echo nl2br(esc_html($item['title'])); ?></h3>
                                 <?php if (!empty($item['location'])): ?>
                                     <p class="timeline-location"><?php echo esc_html($item['location']); ?></p>
                                 <?php endif; ?>
@@ -61,7 +61,7 @@ get_header();
                         <div class="timeline-item">
                             <span class="timeline-time"><?php echo esc_html($item['time']); ?></span>
                             <div class="timeline-content">
-                                <h3 class="timeline-title"><?php echo nl2br(esc_html($item['title'])); ?></h3>
+                                <h3 class="sub-title blue is-lined"><?php echo nl2br(esc_html($item['title'])); ?></h3>
                                 <?php if (!empty($item['location'])): ?>
                                     <p class="timeline-location"><?php echo esc_html($item['location']); ?></p>
                                 <?php endif; ?>
@@ -93,7 +93,7 @@ get_header();
                         <div class="timeline-item">
                             <span class="timeline-time"><?php echo esc_html($item['time']); ?></span>
                             <div class="timeline-content">
-                                <h3 class="timeline-title"><?php echo nl2br(esc_html($item['title'])); ?></h3>
+                                <h3 class="sub-title blue is-lined"><?php echo nl2br(esc_html($item['title'])); ?></h3>
                                 <?php if (!empty($item['location'])): ?>
                                     <p class="timeline-location"><?php echo esc_html($item['location']); ?></p>
                                 <?php endif; ?>
